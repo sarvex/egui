@@ -18,12 +18,9 @@ for entry in chars:
     codepoint = entry[0]
     short_name = entry[1]
     long_name = entry[2].lower()
-    if False:
-        print(f'(0x{codepoint:02X}, "{short_name}", "{long_name}"),')
-    else:
-        name = short_name if long_name == "????" else long_name
-        # print(f'(0x{codepoint:02X}, "{name}"),')
-        all_codepoints[codepoint] = name
+    name = short_name if long_name == "????" else long_name
+    # print(f'(0x{codepoint:02X}, "{name}"),')
+    all_codepoints[codepoint] = name
 
 for codepoint in sorted(all_codepoints.keys()):
     name = all_codepoints[codepoint]
